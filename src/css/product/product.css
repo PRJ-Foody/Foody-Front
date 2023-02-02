@@ -1,0 +1,30 @@
+a {
+  text-decoration: none;
+}
+
+.product-category {
+  padding: 40px;
+}
+.product-category .title {
+  padding: 40px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}
+.product-category .detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+.product-category .nav-link {
+  color: black;
+}
+
+.pagination {
+  justify-content: center;
+  font-size: 18px;
+}
+.pagination .page-link {
+  color: black;
+}/*# sourceMappingURL=product.css.map */
