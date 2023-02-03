@@ -94,6 +94,7 @@
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   border-color: rgb(228, 82, 82);
+  border-left: 0em;
 }
 
 .bottom_header .bh_ul {
@@ -104,6 +105,9 @@
 }
 .bottom_header .bh_ul li {
   font-size: 130%;
+}
+.bottom_header .bh_ul li a:hover {
+  color: rgb(228, 82, 82);
 }
 .bottom_header .bh_ul li a {
   text-decoration: none;
