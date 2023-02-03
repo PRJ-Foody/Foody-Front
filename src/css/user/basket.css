@@ -79,6 +79,7 @@ h1 {
 }
 .basket_box .basket_content .manipulate .discount_box #discount {
   font-size: 1.3rem;
+  font-weight: 700;
 }
 .basket_order {
   width: 28%;
