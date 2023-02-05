@@ -23,12 +23,15 @@ a {
   flex-direction: column;
 }
 .left-side-bar .content a {
+  color: black;
   text-decoration: none;
-  color: #e55f35;
   font-weight: 600;
   padding: 10px;
   text-align: center;
-  border-bottom: 1px solid #e55f35;
+  border-bottom: 1px solid black;
+}
+.left-side-bar .content a:hover {
+  color: #e55f35;
 }
 
 .service-content {
@@ -47,6 +50,9 @@ a {
 .service-content .table th,
 .service-content .table tr {
   text-align: center;
+}
+.service-content .table tr:hover {
+  color: #e55f35;
 }
 .service-content .table .content-title {
   text-align: left;
