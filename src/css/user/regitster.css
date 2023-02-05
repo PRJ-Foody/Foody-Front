@@ -20,6 +20,12 @@
   align-items: center;
   width: 25rem;
 }
+.register_form .register_fieldset .register_input #male2 {
+  margin-right: 2rem;
+}
+.register_form .register_fieldset .register_input #male1 {
+  margin-left: 2rem;
+}
 .register_form .register_fieldset .register_input .male {
   display: flex;
   align-items: center;
@@ -28,6 +34,7 @@
 }
 .register_form .register_fieldset .register_input .male input {
   accent-color: rgb(228, 82, 82);
+  height: 1.5rem;
 }
 .register_form .register_fieldset button {
   width: 25rem;
