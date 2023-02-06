@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .purchased-screen {
-  width: 1440px;
+  width: $screen-size;
   margin: auto;
   display: flex;
   margin-top: $p1;

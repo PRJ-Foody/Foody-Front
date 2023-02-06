@@ -2,7 +2,7 @@
 @import "../component/left-side-bar";
 
 .mypage-screen {
-  width: 1440px;
+  width: $screen-size;
   margin: auto;
   margin-top: $p1;
   display: flex;
