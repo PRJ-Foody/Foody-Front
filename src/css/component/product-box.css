@@ -3,7 +3,6 @@
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 4rem;
 }
 .product-column a {
   color: black;
@@ -13,7 +12,7 @@
   color: #e55f35;
 }
 .product-column .product-box {
-  width: 18rem;
+  width: 17rem;
   padding: 1rem;
 }
 .product-column .product-box__img {
@@ -43,4 +42,4 @@
 .product-column .product-box__real-price {
   font-size: 18px;
   text-decoration: line-through;
-}/*# sourceMappingURL=product-box.css.map */
+} /*# sourceMappingURL=product-box.css.map */

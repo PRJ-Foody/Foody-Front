@@ -55,7 +55,7 @@
     </header>
     <div class="main-screen">
       <div class="container">
-        <div class="slideshow" style="margin-top: -2rem">
+        <div class="slideshow" style="margin: 0 auto; margin-top: -2rem">
           <ul class="slides">
             <li><img src="../../image/slide1.jpeg" /></li>
             <li><img src="../../image/slide2.jpeg" /></li>
@@ -72,10 +72,22 @@
       </div>
       <script src="../../js/slideShow.js"></script>
       <div class="container">
-        <div class="recommand-product">
-          <span class="recommand-product__title">이 상품 어때요?</span>
-          <div class="container product-column">
-            <div class="product-box">
+        <div
+          class="recommand-product"
+          style="
+            width: 69rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+          "
+        >
+          <span
+            class="recommand-product__title"
+            style="font-size: 32px; text-align: center"
+            >이 상품 어때요?</span
+          >
+          <div class="product-column" style="width: 72rem">
+            <div class="product-box" style="width: 16rem">
               <a href="../product/goods.html">
                 <div class="product-box__img">
                   <img src="a.png" />
@@ -147,7 +159,7 @@
       </div>
       <div class="container-fluid">
         <hr />
-        <div class="container footer">
+        <div class="container footer" style="padding-left: 5rem">
           <nav class="top_footer">
             <ul class="tf_ul">
               <li><a href="#">소개</a></li>

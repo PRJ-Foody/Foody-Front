@@ -3,7 +3,6 @@
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 4rem;
 }
 .product-column a {
   color: black;
