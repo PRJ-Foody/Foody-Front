@@ -1,12 +1,23 @@
 @import "../variables";
 
 .product-column {
+  width: $screen-size;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
 
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $theme-color;
+  }
+
   .product-box {
     width: 25%;
-    padding: 2%;
+    padding: 3%;
 
     &__img {
       width: 100%;
@@ -40,6 +51,7 @@
 
     &__real-price {
       font-size: $f2;
+      text-decoration: line-through;
     }
   }
 }
