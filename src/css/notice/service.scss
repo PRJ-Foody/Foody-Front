@@ -25,12 +25,16 @@ a {
     flex-direction: column;
 
     a {
+      color: black;
       text-decoration: none;
-      color: #e55f35;
       font-weight: 600;
       padding: 10px;
       text-align: center;
-      border-bottom: 1px solid #e55f35;
+      border-bottom: 1px solid black;
+    }
+
+    a:hover {
+      color: $theme-color;
     }
   }
 }
@@ -52,6 +56,12 @@ a {
     th,
     tr {
       text-align: center;
+    }
+
+    tbody {
+      tr:hover {
+        color: $theme-color;
+      }
     }
 
     .content-title {

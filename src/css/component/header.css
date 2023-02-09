@@ -1,3 +1,12 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: white;
+}
+
 .top_header .th_ul {
   display: flex;
   list-style: none;
@@ -62,4 +71,8 @@
 .bottom_header .bh_ul li a {
   text-decoration: none;
   color: black;
+}
+
+#hr2 {
+  margin-bottom: 0;
 }/*# sourceMappingURL=header.css.map */
