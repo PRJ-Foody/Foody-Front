@@ -3,6 +3,7 @@
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  padding-left: 4rem;
 }
 .product-column a {
   color: black;
@@ -12,8 +13,8 @@
   color: #e55f35;
 }
 .product-column .product-box {
-  width: 25%;
-  padding: 3%;
+  width: 18rem;
+  padding: 1rem;
 }
 .product-column .product-box__img {
   width: 100%;

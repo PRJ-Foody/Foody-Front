@@ -1,8 +1,9 @@
 .product-column {
-  width: 100rem;
+  width: 1440px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  padding-left: 4rem;
 }
 .product-column a {
   color: black;
@@ -42,4 +43,4 @@
 .product-column .product-box__real-price {
   font-size: 18px;
   text-decoration: line-through;
-} /*# sourceMappingURL=product-box.css.map */
+}/*# sourceMappingURL=product-box.css.map */

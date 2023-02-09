@@ -96,10 +96,11 @@ header {
 }
 
 .product-column {
-  width: 90rem;
+  width: 1440px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  padding-left: 4rem;
 }
 .product-column a {
   color: black;
@@ -145,7 +146,7 @@ header {
   width: 69.75rem;
   height: 16rem;
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   overflow: hidden;
 }
 .slideshow .slides {
@@ -188,6 +189,10 @@ header {
 }
 .slideshow .controller .next:hover {
   transform: translateX(10px);
+}
+
+.footer {
+  padding-left: 3rem;
 }
 
 .top_footer .tf_ul {
@@ -239,8 +244,7 @@ header {
 .recommand-product {
   width: 1440px;
   margin: auto;
-  text-align: center;
 }
 .recommand-product__title {
   font-size: 40px;
-} /*# sourceMappingURL=main-page.css.map */
+}/*# sourceMappingURL=main-page.css.map */
