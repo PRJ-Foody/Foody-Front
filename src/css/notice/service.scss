@@ -58,8 +58,10 @@ a {
       text-align: center;
     }
 
-    tr:hover {
-      color: $theme-color;
+    tbody {
+      tr:hover {
+        color: $theme-color;
+      }
     }
 
     .content-title {

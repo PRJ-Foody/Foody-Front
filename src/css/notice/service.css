@@ -51,7 +51,7 @@ a {
 .service-content .table tr {
   text-align: center;
 }
-.service-content .table tr:hover {
+.service-content .table tbody tr:hover {
   color: #e55f35;
 }
 .service-content .table .content-title {
