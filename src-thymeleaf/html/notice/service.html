@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,14 +16,16 @@
     <title>service</title>
   </head>
   <body>
+    <header th:insert="~{../component :: header}"></header>
     <div class="container service">
       <div class="left-side-bar">
         <div class="title">고객센터</div>
         <nav class="content">
-          <a href="../notice/service.html">공지사항</a>
-          <a href="../mtm/mtm.html">1:1문의</a>
+          <a th:href="@{../notice/service}">공지사항</a>
+          <a th:href="@{../mtm/mtm}">1:1문의</a>
         </nav>
       </div>
+
       <div class="service-content">
         <div class="title">공지사항</div>
         <table class="table">
@@ -35,28 +37,20 @@
               <th scope="col">작성일</th>
             </tr>
           </thead>
-          <tbody>
-            <tr onclick="window.location='notice.html';">
-              <td scope="row">1</td>
-              <td class="content-title">Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td scope="row">2</td>
-              <td class="content-title">Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td scope="row">3</td>
-              <td class="content-title">Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
+          <!-- noticeList를 받아 각각을 출력 -->
+          <tbody th:each="notice, status: ${noticeList}">
+            <tr
+              th:onclick="'window.location.href = \'' + ${'notice_read?id=' + notice.id} + '\''"
+            >
+              <td th:text="${notice.id}" scope="row">1</td>
+              <td th:text="${notice.title}" class="content-title">Mark</td>
+              <td th:text="${notice.writer}">Otto</td>
+              <td th:text="${notice.date}">@mdo</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
+    <footer th:insert="~{../component :: footer}"></footer>
   </body>
 </html>

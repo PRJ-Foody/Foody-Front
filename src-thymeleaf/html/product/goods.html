@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,27 +28,32 @@
         var count = parseInt(
           document.querySelector(".current-count").textContent
         );
-        if (count > 0)
+        if (count > 1)
           document.querySelector(".current-count").innerText = count - 1;
       }
     </script>
   </head>
   <body>
+    <header th:insert="~{../component :: header}"></header>
     <div class="container">
-      <div class="goods-screen">
-        <img class="product-image" src="#" />
+      <!-- /// -->
+      <div th:object="${product}" class="goods-screen">
+        <img
+          class="product-image"
+          th:src="${'../../image/product/' + product.image}"
+        />
         <div class="product-detail">
-          <div class="title">[푸르밀] 밀면</div>
+          <div th:text="*{title}" class="title">[푸르밀] 밀면</div>
           <div class="price">
             <span class="discount">30%</span>
             <span>1,000</span>
             <span>원</span>
           </div>
-          <div class="real-price">1,500원</div>
+          <div th:text="*{price}" class="real-price">1,500원</div>
           <div class="detail">
             <div class="box">
               <div class="left">판매자</div>
-              <div class="right">푸르밀</div>
+              <div th:text="*{seller}" class="right">푸르밀</div>
             </div>
             <div class="box">
               <div class="left">포장타입</div>
@@ -56,7 +61,7 @@
             </div>
             <div class="box">
               <div class="left">판매단위</div>
-              <div class="right">1팩</div>
+              <div class="right">1</div>
             </div>
             <div class="box">
               <div class="left">중량/용량</div>
@@ -66,11 +71,19 @@
               <div class="left">원산지</div>
               <div class="right">상품설명/상세정보 참고</div>
             </div>
-            <div class="box">
+
+            <!-- form을 통해 현재 상품 정보 (상품 아이디, 개수)를 넘김 -->
+            <form
+              th:object="${order}"
+              th:action="@{../basket/basket}"
+              th:method="get"
+              class="box"
+            >
+              <input type="hidden" th:value="${product.id}" />
               <div class="left">
                 <div class="count">
                   <button onclick="countDown();">-</button>
-                  <span class="current-count">0</span>
+                  <span th:field="*{quantity}" class="current-count">1</span>
                   <button onclick="countUp();">+</button>
                 </div>
               </div>
@@ -82,10 +95,11 @@
                   장바구니에 담기
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
+    <footer th:insert="~{../component :: footer}"></footer>
   </body>
 </html>

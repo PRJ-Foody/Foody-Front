@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,29 +16,20 @@
     <title>event</title>
   </head>
   <body>
-    <div class="event-box">
-      <img src="../../image/logo.png" />
-      <div class="content">
-        <div class="detail">핫도그부터 아이스크림까지</div>
-        <div class="title">방학 간식 최대 30% 할인</div>
-        <div class="date">~2월 9일 (목) 까지</div>
+    <header th:insert="~{../component :: header}"></header>
+    <!-- Event List를 받아옴 -->
+    <div th:each="event, status: ${eventList}">
+      <div class="event-box">
+        <img th:src="${'../../image/event/' + event.image}" />
+        <div class="content">
+          <div class="detail">핫도그부터 아이스크림까지</div>
+          <div th:text="${event.title}" class="title">
+            방학 간식 최대 30% 할인
+          </div>
+          <div th:text="${event.endDate}" class="date">~2월 9일 (목) 까지</div>
+        </div>
       </div>
     </div>
-    <div class="event-box">
-      <img src="../../image/logo.png" />
-      <div class="content">
-        <div class="detail">핫도그부터 아이스크림까지</div>
-        <div class="title">방학 간식 최대 30% 할인</div>
-        <div class="date">~2월 9일 (목) 까지</div>
-      </div>
-    </div>
-    <div class="event-box">
-      <img src="../../image/logo.png" />
-      <div class="content">
-        <div class="detail">핫도그부터 아이스크림까지</div>
-        <div class="title">방학 간식 최대 30% 할인</div>
-        <div class="date">~2월 9일 (목) 까지</div>
-      </div>
-    </div>
+    <footer th:insert="~{../component :: footer}"></footer>
   </body>
 </html>

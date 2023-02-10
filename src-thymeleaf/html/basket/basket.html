@@ -94,6 +94,8 @@
             <p>결제 예정 금액</p>
             <p th:text="${priceSum.sum + '원'}">54000원</p>
           </div>
+
+          <!-- form을 통해 order 링크로 이동하며, 현재 장바구니 데이터를 모두 order로 이동 -->
           <form th:action="@{../order/order}" th:method="get">
             <button>주문하기</button>
           </form>
