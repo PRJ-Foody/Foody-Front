@@ -4,6 +4,7 @@ header {
   left: 0;
   right: 0;
   z-index: 2;
+  background-color: white;
 }
 
 .top_header .th_ul {
@@ -70,4 +71,8 @@ header {
 .bottom_header .bh_ul li a {
   text-decoration: none;
   color: black;
-}/*# sourceMappingURL=header.css.map */
+}
+
+#hr2 {
+  margin-bottom: 0;
+} /*# sourceMappingURL=header.css.map */

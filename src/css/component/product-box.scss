@@ -5,7 +5,6 @@
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-
   a {
     color: black;
     text-decoration: none;
@@ -16,8 +15,8 @@
   }
 
   .product-box {
-    width: 25%;
-    padding: 3%;
+    width: 17rem;
+    padding: 1rem;
 
     &__img {
       width: 100%;

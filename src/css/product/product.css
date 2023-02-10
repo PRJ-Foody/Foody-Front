@@ -12,8 +12,8 @@
   color: #e55f35;
 }
 .product-column .product-box {
-  width: 25%;
-  padding: 3%;
+  width: 18rem;
+  padding: 1rem;
 }
 .product-column .product-box__img {
   width: 100%;
@@ -91,4 +91,4 @@ a {
 }
 .pagination .page-link {
   color: black;
-}/*# sourceMappingURL=product.css.map */
+} /*# sourceMappingURL=product.css.map */

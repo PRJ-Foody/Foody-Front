@@ -4,6 +4,7 @@ header {
   left: 0;
   right: 0;
   z-index: 2;
+  background-color: white;
 }
 
 .top_header .th_ul {
@@ -72,6 +73,13 @@ header {
   color: black;
 }
 
+<<<<<<< HEAD
+=======
+#hr2 {
+  margin-bottom: 0;
+}
+
+>>>>>>> 549985375e571ff897f54d7ad830938d980246a2
 .basket-icon {
   width: 50px;
   height: 50px;
@@ -104,8 +112,13 @@ header {
   color: #e55f35;
 }
 .product-column .product-box {
+<<<<<<< HEAD
   width: 25%;
   padding: 3%;
+=======
+  width: 18rem;
+  padding: 1rem;
+>>>>>>> 549985375e571ff897f54d7ad830938d980246a2
 }
 .product-column .product-box__img {
   width: 100%;
@@ -185,6 +198,13 @@ header {
   transform: translateX(10px);
 }
 
+<<<<<<< HEAD
+=======
+.footer {
+  padding-left: 3rem;
+}
+
+>>>>>>> 549985375e571ff897f54d7ad830938d980246a2
 .top_footer .tf_ul {
   list-style: none;
   display: flex;
