@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,14 +16,16 @@
     <title>mtm</title>
   </head>
   <body>
+    <header th:insert="~{../component :: header}"></header>
     <div class="container service">
       <div class="left-side-bar">
         <div class="title">고객센터</div>
         <nav class="content">
-          <a href="../notice/service.html">공지사항</a>
-          <a href="../mtm/mtm.html">1:1문의</a>
+          <a th:href="@{../notice/service}">공지사항</a>
+          <a th:href="@{../mtm/mtm}">1:1문의</a>
         </nav>
       </div>
+
       <div class="service-content">
         <div class="title">1:1문의</div>
         <div class="table-screen">
@@ -41,9 +43,9 @@
               <tr
                 th:onclick="'window.location.href = \'' + ${'mtm_read?id=' + mtm.id} + '\''"
               >
-                <td th:text="mtm.title" class="content-title">Mark</td>
-                <td th:text="mtm.date">@day</td>
-                <td th:text="mtm.reply">Y</td>
+                <td th:text="${mtm.title}" class="content-title">Mark</td>
+                <td th:text="${mtm.date}">@day</td>
+                <td th:text="${mtm.reply}">Y</td>
               </tr>
             </tbody>
           </table>
@@ -53,5 +55,6 @@
         </form>
       </div>
     </div>
+    <footer th:insert="~{../component :: footer}"></footer>
   </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,18 +16,28 @@
     <title>write</title>
   </head>
   <body>
+    <header th:insert="~{../component :: header}"></header>
     <div class="container write-screen">
       <div class="left-side-bar">
         <div class="title">고객센터</div>
         <nav class="content">
-          <a href="../notice/service.html">공지사항</a>
-          <a href="../mtm/mtm.html">1:1문의</a>
+          <a th:href="@{../notice/service}">공지사항</a>
+          <a th:href="@{../mtm/mtm}">1:1문의</a>
         </nav>
       </div>
-      <div class="content">
+
+      <!-- 빈 write 객체를 가져옴 -->
+      <form
+        th:object="${write}"
+        th:action="@{/mtm}"
+        th:method="post"
+        class="content"
+      >
         <div class="title">
           <span class="left">제목</span>
+          <!-- title 지정 -->
           <input
+            th:field="*{title}"
             class="right"
             type="text"
             name="title"
@@ -35,12 +45,18 @@
           />
         </div>
         <div>
-          <textarea id="summernote" name="contents"></textarea>
+          <!-- content 지정 -->
+          <textarea
+            th:filed="*{content}"
+            id="summernote"
+            name="contents"
+          ></textarea>
         </div>
         <div class="button-box">
           <button>등록</button>
         </div>
-      </div>
+      </form>
     </div>
+    <footer th:insert="~{../component :: footer}"></footer>
   </body>
 </html>
